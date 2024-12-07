@@ -1,0 +1,1 @@
+String ouputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();
