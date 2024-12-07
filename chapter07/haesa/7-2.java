@@ -1,0 +1,13 @@
+ACMEPort port = new ACMEPort(12);
+try {
+	port.open();
+} catch (DeviceResponseException e) {
+	reportPortError(e);
+	logger.log(“Device response exception”, e);
+} catch (ATM121UnlockedException e) {
+	reportPortError(e);
+	logger.log(“Unlock exception”, e);
+} catch (GMXError e) {
+	reportPortError(e);
+	logger.log(“Device response exception”);
+}
